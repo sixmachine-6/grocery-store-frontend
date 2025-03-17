@@ -1,12 +1,69 @@
-# React + Vite
+# Vite React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React project bootstrapped with [Vite](https://vitejs.dev/).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 **Getting Started**
 
-## Expanding the ESLint configuration
+### **1. Clone the repository**
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/your-username/your-repo.git
+```
+
+### 2.Navigate to the project folder
+
+'''bash
+cd your-repo
+
+### 3. Install dependencies
+
+npm install
+
+### 4.Start the development server
+
+npm run dev
+
+Project Structure
+php
+Copy
+Edit
+├── public/ # Static files  
+├── src/ # Source files  
+│ ├── features/ # Images and assets  
+│ ├── components/ # React components  
+│ ├── hooks/ # Custom hooks  
+│ ├── pages/ # Page components  
+│ ├── styles/ # Global styles  
+│ ├── App.jsx # Main component  
+│ └── main.jsx # Entry point  
+├── .gitignore  
+├── index.html  
+├── package.json  
+├── README.md  
+├── vite.config.js  
+└── jsconfig.json
+
+Available Scripts
+Start development server
+bash
+Copy
+Edit
+npm run dev
+
+Build for production
+bash
+Copy
+Edit
+npm run build
+Preview production build
+bash
+Copy
+Edit
+npm run preview
+
+Tech Stack
+React – Frontend library
+Vite – Build tool
+JavaScript – Language
