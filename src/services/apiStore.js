@@ -2,7 +2,9 @@ import axios from "axios";
 
 export async function getStores() {
   try {
-    const response = await axios.get("http://127.0.0.1:5000/api/v1/store");
+    const response = await axios.get(
+      "https://grocery-store-backend-w8lf.onrender.com/api/v1/store"
+    );
 
     return response.data; // Assuming the data is in response.data
   } catch (error) {
@@ -13,7 +15,7 @@ export async function getStores() {
 export async function createStore(storeData) {
   try {
     const response = await axios.post(
-      "http://127.0.0.1:5000/api/v1/store",
+      "https://grocery-store-backend-w8lf.onrender.com/api/v1/store",
       storeData,
       {
         headers: {

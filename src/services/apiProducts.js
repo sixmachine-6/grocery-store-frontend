@@ -7,7 +7,7 @@ export async function getProducts(id, sortBy) {
     if (sortBy) params.append("sort", sortBy);
 
     const response = await axios.get(
-      `http://127.0.0.1:5000/api/v1/products?${params.toString()}`
+      `https://grocery-store-backend-w8lf.onrender.com/api/v1/products?${params.toString()}`
     );
 
     return response.data; // Assuming the data is in response.data
@@ -21,7 +21,7 @@ export async function getProducts(id, sortBy) {
 export async function createProduct(productData) {
   try {
     const response = await axios.post(
-      "http://127.0.0.1:5000/api/v1/products",
+      "https://grocery-store-backend-w8lf.onrender.com/api/v1/products",
       productData,
       {
         headers: {

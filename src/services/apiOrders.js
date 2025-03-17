@@ -7,7 +7,7 @@ export async function createOrder(orderData) {
     if (!token) throw new Error("No auth token found");
 
     const response = await axios.post(
-      "http://127.0.0.1:5000/api/v1/orders",
+      "https://grocery-store-backend-w8lf.onrender.com/api/v1/orders",
       orderData,
       {
         headers: {
@@ -25,11 +25,14 @@ export async function createOrder(orderData) {
 export async function getOrders() {
   try {
     const token = localStorage.getItem("authToken");
-    const response = await axios.get("http://127.0.0.1:5000/api/v1/orders", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const response = await axios.get(
+      "https://grocery-store-backend-w8lf.onrender.com/api/v1/orders",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
     return response.data;
   } catch (error) {
     throw new Error(error.response?.data?.message || "Failed to fetch orders");
