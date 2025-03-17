@@ -11,7 +11,6 @@ function ProductList() {
   const [quantities, setQuantities] = useState(1);
   const { cartCreation } = useCreateCart();
   if (isLoading) return <Spinner />;
-
   const handleAddToCart = (product) => {
     cartCreation({
       productID: product._id,
@@ -27,6 +26,10 @@ function ProductList() {
     setQuantities(() => quantities + 1);
   };
 
+  if (products.length === 0)
+    return (
+      <p className="text-2xl font-bold">No products are for this category</p>
+    );
   return (
     <div className="bg-slate-100">
       <Navbar />
@@ -45,17 +48,17 @@ function ProductList() {
               {/* Product Image */}
               <img
                 src={"./../../landing.png "}
-                alt={product.name}
+                alt={product?.name}
                 className="w-40 object-cover m-auto"
               />
 
               {/* Product Info */}
               <div className="p-4 space-y-3">
                 <h3 className="font-semibold text-xl text-gray-800">
-                  {product.name}
+                  {product?.name}
                 </h3>
-                <p className="text-gray-500">{product.storeID.name}</p>
-                <p className="text-green-600 font-bold">₹{product.price}</p>
+                <p className="text-gray-500">{product?.storeID?.name}</p>
+                <p className="text-green-600 font-bold">₹{product?.price}</p>
 
                 {/* Quantity and Add to Cart */}
                 <div className="flex items-center justify-between mt-3">
