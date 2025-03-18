@@ -1,0 +1,10 @@
+# Build settings
+[build]
+  command = "npm install && npm run build"
+  publish = "dist" # For Vite, use "build" for Create React App
+
+# Redirect settings for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
